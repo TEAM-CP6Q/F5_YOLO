@@ -20,7 +20,7 @@ app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 최대 16MB로 설정
 CORS(app)
 
 # 환경 변수 설정
-WASTE_API_URL = "https://172.31.1.48:15000/api/pickup/waste/type-list"
+WASTE_API_URL = "https://172.31.1.48:12000/api/pickup/waste/type-list"
 
 # 학습된 커스텀 모델 경로 설정
 CUSTOM_MODEL_PATH = "yolov8x_waste_final.pt"
