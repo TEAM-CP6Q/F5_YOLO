@@ -20,38 +20,13 @@ app = Flask(__name__)
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024  # 최대 16MB로 설정
 CORS(app)
 
-def get_custom_model_path():
-    """환경에 따라 커스텀 모델 경로 반환"""
-    
-    # 디버깅 정보 출력
-    print(f"현재 시스템: {platform.system()}")
-    print(f"현재 작업 디렉토리: {os.getcwd()}")
-    
-    # 가능한 모든 경로 시도
-    possible_paths = [
-        "yolov8_waste_model0601_v3.pt",  # 현재 디렉토리
-        "../yolov8_waste_model0601_v3.pt",  # 부모 디렉토리
-        "/home/ubuntu/waste-detection/F5_yolo/yolo_Server/yolov8_waste_model0601_v3.pt",  # 절대 경로
-        "./yolov8_waste_model0601_v3.pt"  # 명시적 현재 디렉토리
-    ]
-    
-    # 파일이 실제로 존재하는 경로 찾기
-    for path in possible_paths:
-        print(f"경로 확인: {path} -> 존재: {os.path.exists(path)}")
-        if os.path.exists(path):
-            print(f"모델 파일 발견: {path}")
-            return path
-    
-    # 모든 경로에서 찾지 못한 경우
-    print("커스텀 모델을 찾을 수 없습니다.")
-    return None
 
 # 환경 변수 설정
 WASTE_API_URL = "http://10.0.0.214:12000/api/pickup/waste/type-list"
 # WASTE_API_URL = "http://43.200.249.25:12000/api/pickup/waste/type-list"
 
 # 학습된 커스텀 모델 경로 설정
-CUSTOM_MODEL_PATH = get_custom_model_path()
+CUSTOM_MODEL_PATH = "yolov8_waste_model0601_v3.pt"
 # 백업용 기본 모델
 DEFAULT_MODEL_NAME = "yolov8n.pt"
 
