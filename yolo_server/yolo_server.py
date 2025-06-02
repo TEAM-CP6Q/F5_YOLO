@@ -24,7 +24,7 @@ WASTE_API_URL = "http://10.0.0.214:12000/api/pickup/waste/type-list"
 # WASTE_API_URL = "http://43.200.249.25:12000/api/pickup/waste/type-list"
 
 # 학습된 커스텀 모델 경로 설정
-CUSTOM_MODEL_PATH = "yolov8_waste_model0601_v3.pt"
+CUSTOM_MODEL_PATH = "../yolov8_waste_model0601_v3.pt"
 # 백업용 기본 모델
 DEFAULT_MODEL_NAME = "yolov8n.pt"
 
