@@ -7,7 +7,7 @@ import json
 import requests
 import time
 import torch
-from PIL import Image, ImageEnhance, ImageFilter, ImageOps
+from PIL import Image, ImageEnhance, ImageFilter, ImageOps,ImageStat
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
