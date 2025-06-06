@@ -57,12 +57,15 @@ const PickupResultPage = () => {
           roadNameAddress: userData.roadNameAddress,
           detailedAddress: userData.detailedAddress
         },
-        Details: selectedItems.map(item => ({
-          wasteId: item.id,
-          weight: item.quantity,
-          pricePreview: item.totalPrice
-        }))
+        Details: selectedItems
+          .filter(item => item.id !== undefined)
+          .map(item => ({
+            wasteId: item.id,
+            weight: item.quantity,
+            pricePreview: item.totalPrice
+          }))
       };
+      
 
       console.log('Request Data:', requestData);
 
