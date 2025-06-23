@@ -26,7 +26,8 @@ WASTE_API_URL = "http://10.0.0.214:12000/api/pickup/waste/type-list"
 # WASTE_API_URL = "http://43.200.249.25:12000/api/pickup/waste/type-list"
 
 # 학습된 커스텀 모델 경로 설정
-CUSTOM_MODEL_PATH = "yolov8_waste_model0601_v3.pt"
+# CUSTOM_MODEL_PATH = "yolov8_waste_model0601_v3.pt"
+CUSTOM_MODEL_PATH = "yolov8n.pt"
 # 백업용 기본 모델
 DEFAULT_MODEL_NAME = "yolov8n.pt"
 
@@ -165,11 +166,11 @@ ENGLISH_TO_API_MAPPING = {
     "dining table": {"api_category": "가구류", "api_type": "식탁", "daegu_key": "dining_table_small"},
     
     # 기타
-    "toilet": {"api_category": "욕실용품", "api_type": "변기", "daegu_key": "toilet"},
-    "sink": {"api_category": "욕실용품", "api_type": "세면대", "daegu_key": "sink"},
-    "vase": {"api_category": "기타류", "api_type": "화분", "daegu_key": "vase"},
-    "potted plant": {"api_category": "기타류", "api_type": "화분", "daegu_key": "potted_plant_small"},
-    "teddy bear": {"api_category": "유아용품", "api_type": "장난감", "daegu_key": "teddy_bear"}
+    # "toilet": {"api_category": "욕실용품", "api_type": "변기", "daegu_key": "toilet"},
+    # "sink": {"api_category": "욕실용품", "api_type": "세면대", "daegu_key": "sink"},
+    # "vase": {"api_category": "기타류", "api_type": "화분", "daegu_key": "vase"},
+    # "potted plant": {"api_category": "기타류", "api_type": "화분", "daegu_key": "potted_plant_small"},
+    # "teddy bear": {"api_category": "유아용품", "api_type": "장난감", "daegu_key": "teddy_bear"}
 }
 
 # 주요 객체 우선순위 설정 (페트병 우선)
